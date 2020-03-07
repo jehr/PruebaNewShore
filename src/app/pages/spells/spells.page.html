@@ -1,0 +1,21 @@
+<app-header title="Hechizos"></app-header>
+
+<ion-content>
+
+  <ion-grid fixed>
+    <ion-row>
+      <ion-col size="3" *ngFor="let spell of spells | async">
+        <ion-card>
+          <ion-card-header class="header-card">
+            <ion-card-title color="light">Tipo: {{ spell.type }}</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            <ion-label><b>Hechizo:</b> {{ spell.spell }}</ion-label><br>
+            <ion-label><b>Efecto:</b>  {{ spell.effect }}</ion-label>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+</ion-content>

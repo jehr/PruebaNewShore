@@ -1,0 +1,22 @@
+[
+    {
+      "icon": "school",
+      "name": "Estudiantes",
+      "redirect": "/student"
+    },
+    {
+      "icon": "person",
+      "name": "Profesores",
+      "redirect": "/teacher"
+    },
+    {
+      "icon": "home",
+      "name": "Casas",
+      "redirect": "/house"
+    },
+    {
+      "icon": "color-wand",
+      "name": "Hechizos",
+      "redirect": "/spells"
+    }
+  ]

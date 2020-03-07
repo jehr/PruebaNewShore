@@ -1,0 +1,16 @@
+
+
+
+    <!-- <ion-grid fixed>
+        <ion-row *ngFor="let cha of characters | async">
+            <ion-col size="6"  *ngIf="cha.role && cha.role == 'student'" >
+                <ion-list >
+                   <ion-label>{{ cha.name }}</ion-label>
+                </ion-list>
+            </ion-col>
+        </ion-row>
+    </ion-grid> -->
+<div class="table table-responsive smart-table center">
+    <ng2-smart-table [settings]="settings" [source]="characters"></ng2-smart-table>
+</div>
+
