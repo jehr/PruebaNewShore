@@ -9,6 +9,9 @@ import { DataService } from 'src/app/Services/data.services';
 })
 export class TeacherPage implements OnInit {
 
+   /*Inicializamos la variable de páginas,
+   el cual diremos que sera un  colección de eventos o valores de un futuro gracias al Observable,
+   */
   characters: Observable<any>;
   
 
@@ -17,6 +20,9 @@ export class TeacherPage implements OnInit {
   
 
   ngOnInit() {
+    /**
+     * Hacemos el llamado del servicio
+     */
     this.characters = this.dataService.getCharacters();
   }
 

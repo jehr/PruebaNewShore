@@ -9,9 +9,6 @@ import { Component, OnInit } from '@angular/core';
 })
 export class StudentPage implements OnInit {
 
-  
-  
-
   constructor() { }
 
   ngOnInit() {

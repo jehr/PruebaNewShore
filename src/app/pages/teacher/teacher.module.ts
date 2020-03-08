@@ -9,6 +9,11 @@ import { TeacherPageRoutingModule } from './teacher-routing.module';
 import { TeacherPage } from './teacher.page';
 import { ComponentsModule } from '../../components/components.module';
 
+
+/**
+ * Importamos el ComponentsModule, para poder utilizar los componentes que hemos creados
+ */
+
 @NgModule({
   imports: [
     CommonModule,

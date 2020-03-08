@@ -9,6 +9,10 @@ import { StudentPageRoutingModule } from './student-routing.module';
 import { StudentPage } from './student.page';
 import { ComponentsModule } from '../../components/components.module';
 
+/**
+ * Importamos el ComponentsModule, para poder utilizar los componentes que hemos creados
+ */
+
 @NgModule({
   imports: [
     CommonModule,

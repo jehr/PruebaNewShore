@@ -10,7 +10,9 @@ import { CompleterService } from 'ng2-completer';
 import { ModalComponent } from './modal/modal.component';
 import { TeacherComponent } from './teacher/teacher.component';
 
-
+/**
+ * Declaramos y exportamos los componentes que fueron creados, para ser utilizados en el proyecto
+ */
 
 @NgModule({
   declarations: [

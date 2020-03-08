@@ -9,6 +9,10 @@ import { HousePageRoutingModule } from './house-routing.module';
 import { HousePage } from './house.page';
 import { ComponentsModule } from '../../components/components.module';
 
+/**
+ * Importamos el ComponentsModule, para poder utilizar los componentes que hemos creados
+ */
+
 @NgModule({
   imports: [
     CommonModule,

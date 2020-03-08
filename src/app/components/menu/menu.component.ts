@@ -10,11 +10,19 @@ import { Page } from '../../interface/interfaces';
 })
 export class MenuComponent implements OnInit {
 
+  /*Inicializamos la variable de páginas,
+   el cual diremos que sera un  colección de eventos o valores de un futuro gracias al Observable,
+   y este sera un arreglo de páginas */
   Pages: Observable<Page[]>;
 
-  constructor(private dataService: DataService) { }
+  constructor(private dataService: DataService) { 
+
+  }
 
   ngOnInit() {
+    /**
+     * Hacemos llamado al servicio de listar el menu, en donde debemos de utilizar el DataServices que nos posee angular
+     */
     this.Pages = this.dataService.getMenu();
   }
 

@@ -1,16 +1,14 @@
 
+<!--
+    Utilizamos el ng2-smar-table, el cual nos permite listar datos en una table y definir en que campos de la tabla
+    queremos aregar campos de busqueda, le ingresa como parametros los settings, que es un json de los nombres
+    de las columnas del cual vamos a dar referencia, y le ingresa el sorce que este es donde vienen los datos de las filas 
+    de la tabla
+-->
+<body>
+    <div class="student-list">
+        <ng2-smart-table  [settings]="settings" [source]="characters"></ng2-smart-table>
+    </div>
+</body>
 
-
-    <!-- <ion-grid fixed>
-        <ion-row *ngFor="let cha of characters | async">
-            <ion-col size="6"  *ngIf="cha.role && cha.role == 'student'" >
-                <ion-list >
-                   <ion-label>{{ cha.name }}</ion-label>
-                </ion-list>
-            </ion-col>
-        </ion-row>
-    </ion-grid> -->
-<div class="table table-responsive smart-table center">
-    <ng2-smart-table [settings]="settings" [source]="characters"></ng2-smart-table>
-</div>
 

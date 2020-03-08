@@ -1,18 +1,32 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>Miembros</ion-title>
+    <ion-title
+      class="ion-text-center">Lista Miembros</ion-title>
+    <ion-buttons slot="end">
+      <ion-back-button
+        icon="close"
+        defaultHref="/"
+        (click)="closeModal()"
+      ></ion-back-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
-
+<!-- Modal que hace referencia a los miembros de una casa -->
 <ion-content>
 
   <ion-grid fixed>
-    <ion-list *ngFor="let mem of members">
-      <ion-label >
-        {{ mem.name }}
-      </ion-label>
-    </ion-list>
-    
+    <ion-card>
+      <ion-card-content *ngFor="let mem of members; let indice=index">
+        <ion-col offset="3.5" size="3">
+          <ion-label class="ion-text-center">
+            {{ indice+1 }} --
+         </ion-label>
+         <ion-label class="ion-text-center">
+           {{ mem.name }}
+         </ion-label>
+        </ion-col>
+      </ion-card-content>
+    </ion-card>
   </ion-grid>
 
 </ion-content>

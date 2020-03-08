@@ -9,16 +9,10 @@ import { Page } from '../../interface/interfaces';
 })
 export class InicioPage implements OnInit {
 
-  Pages: Page[] = [];
-
   constructor( private menuCtrl: MenuController) { }
 
   ngOnInit() {
   }
-
-  // openMenu(){
-  //   this.menuCtrl.toggle();
-  // }
 
 }
 

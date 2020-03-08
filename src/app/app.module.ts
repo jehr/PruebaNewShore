@@ -12,6 +12,9 @@ import { ComponentsModule } from "./components/components.module";
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { Ng2SmartTableModule } from 'ng2-smart-table';
 
+/**
+ * Importamos los modulos necesarios para el proyecto
+ */
 
 @NgModule({
   declarations: [AppComponent],

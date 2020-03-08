@@ -12,8 +12,12 @@ import { ModalComponent } from '../../components/modal/modal.component';
 export class HousePage implements OnInit {
 
   houses: Observable<any>;
+  _id: string;
 
   constructor(private dataService: DataService, private modalCtrl: ModalController) { 
+     /**
+     * Hacemos el llamado al servicio creado
+     */
     this.houses = this.dataService.getHouseServis();
   }
 
@@ -23,18 +27,28 @@ export class HousePage implements OnInit {
     
   }
 
+  /**
+   * 
+   * @param data Función que nos permite cerrar el modal
+   */
   async closeModal(data?) {
     await this.modalCtrl.dismiss(data);
   }
 
+  /**
+   * Funcion que nos permite creal el modal gracias a la inyección que hicimos de modalController, para 
+   * luego hacer el llamado de la página de la cual la queremos convertir en modal
+   * @param _id parametro que recibe del id de la casa
+   */
   async openModal(_id) {
     const modal = await this.modalCtrl.create({
       component: ModalComponent,
       swipeToClose: true,
       presentingElement: await this.modalCtrl.getTop()
     });
-    return await modal.present();
-
+    await modal.present();
+    const {data} = await modal.onDidDismiss();
+    this._id = data;
   }
 
 
